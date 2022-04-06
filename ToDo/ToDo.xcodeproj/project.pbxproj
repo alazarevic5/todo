@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C597672027FDFD1F00EB0B92 /* probaSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C597671F27FDFD1F00EB0B92 /* probaSB.swift */; };
 		DA232B0E27F5A18B007D997E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B0D27F5A18B007D997E /* AppDelegate.swift */; };
 		DA232B1027F5A18B007D997E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B0F27F5A18B007D997E /* SceneDelegate.swift */; };
 		DA232B1227F5A18B007D997E /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B1127F5A18B007D997E /* ActiveViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C597671F27FDFD1F00EB0B92 /* probaSB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = probaSB.swift; sourceTree = "<group>"; };
 		DA232B0A27F5A18B007D997E /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA232B0D27F5A18B007D997E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA232B0F27F5A18B007D997E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 		DA232B0127F5A18B007D997E = {
 			isa = PBXGroup;
 			children = (
+				C597671F27FDFD1F00EB0B92 /* probaSB.swift */,
 				DA232B0C27F5A18B007D997E /* ToDo */,
 				DA232B0B27F5A18B007D997E /* Products */,
 			);
@@ -175,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA232B4C27F5BD5C007D997E /* Model.swift in Sources */,
+				C597672027FDFD1F00EB0B92 /* probaSB.swift in Sources */,
 				DA232B4627F5A38A007D997E /* CompletedViewController.swift in Sources */,
 				DA232B1227F5A18B007D997E /* ActiveViewController.swift in Sources */,
 				DA232B0E27F5A18B007D997E /* AppDelegate.swift in Sources */,
