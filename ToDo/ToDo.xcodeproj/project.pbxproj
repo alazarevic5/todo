@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DCBFAE627FDFD20006B705D /* probaNB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCBFAE527FDFD20006B705D /* probaNB.swift */; };
 		DA232B0E27F5A18B007D997E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B0D27F5A18B007D997E /* AppDelegate.swift */; };
 		DA232B1027F5A18B007D997E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B0F27F5A18B007D997E /* SceneDelegate.swift */; };
 		DA232B1227F5A18B007D997E /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B1127F5A18B007D997E /* ActiveViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DCBFAE527FDFD20006B705D /* probaNB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = probaNB.swift; sourceTree = "<group>"; };
 		DA232B0A27F5A18B007D997E /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA232B0D27F5A18B007D997E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA232B0F27F5A18B007D997E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				DA232B1627F5A18C007D997E /* Assets.xcassets */,
 				DA232B1827F5A18C007D997E /* LaunchScreen.storyboard */,
 				DA232B1B27F5A18C007D997E /* Info.plist */,
+				2DCBFAE527FDFD20006B705D /* probaNB.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				DA232B4627F5A38A007D997E /* CompletedViewController.swift in Sources */,
 				DA232B1227F5A18B007D997E /* ActiveViewController.swift in Sources */,
 				DA232B0E27F5A18B007D997E /* AppDelegate.swift in Sources */,
+				2DCBFAE627FDFD20006B705D /* probaNB.swift in Sources */,
 				DA232B1027F5A18B007D997E /* SceneDelegate.swift in Sources */,
 				DA232B4227F5A35B007D997E /* AddNewViewController.swift in Sources */,
 				DA232B4427F5A373007D997E /* DetailsViewController.swift in Sources */,
