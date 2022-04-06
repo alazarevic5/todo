@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE98512627FE043300972BFB /* probaMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE98512527FE043300972BFB /* probaMI.swift */; };
 		DA232B0E27F5A18B007D997E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B0D27F5A18B007D997E /* AppDelegate.swift */; };
 		DA232B1027F5A18B007D997E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B0F27F5A18B007D997E /* SceneDelegate.swift */; };
 		DA232B1227F5A18B007D997E /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B1127F5A18B007D997E /* ActiveViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE98512527FE043300972BFB /* probaMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = probaMI.swift; sourceTree = "<group>"; };
 		DA232B0A27F5A18B007D997E /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA232B0D27F5A18B007D997E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA232B0F27F5A18B007D997E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				DA232B1627F5A18C007D997E /* Assets.xcassets */,
 				DA232B1827F5A18C007D997E /* LaunchScreen.storyboard */,
 				DA232B1B27F5A18C007D997E /* Info.plist */,
+				CE98512527FE043300972BFB /* probaMI.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			files = (
 				DA232B4C27F5BD5C007D997E /* Model.swift in Sources */,
 				DA232B4627F5A38A007D997E /* CompletedViewController.swift in Sources */,
+				CE98512627FE043300972BFB /* probaMI.swift in Sources */,
 				DA232B1227F5A18B007D997E /* ActiveViewController.swift in Sources */,
 				DA232B0E27F5A18B007D997E /* AppDelegate.swift in Sources */,
 				DA232B1027F5A18B007D997E /* SceneDelegate.swift in Sources */,
