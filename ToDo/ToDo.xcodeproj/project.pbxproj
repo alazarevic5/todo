@@ -17,6 +17,7 @@
 		DA232B4427F5A373007D997E /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B4327F5A373007D997E /* DetailsViewController.swift */; };
 		DA232B4627F5A38A007D997E /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B4527F5A38A007D997E /* CompletedViewController.swift */; };
 		DA232B4C27F5BD5C007D997E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B4B27F5BD5C007D997E /* Model.swift */; };
+		ECD2620A27FDFD1D00681239 /* probaAB.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD2620927FDFD1D00681239 /* probaAB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		DA232B4327F5A373007D997E /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		DA232B4527F5A38A007D997E /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
 		DA232B4B27F5BD5C007D997E /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		ECD2620927FDFD1D00681239 /* probaAB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = probaAB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				DA232B1627F5A18C007D997E /* Assets.xcassets */,
 				DA232B1827F5A18C007D997E /* LaunchScreen.storyboard */,
 				DA232B1B27F5A18C007D997E /* Info.plist */,
+				ECD2620927FDFD1D00681239 /* probaAB.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				DA232B1027F5A18B007D997E /* SceneDelegate.swift in Sources */,
 				DA232B4227F5A35B007D997E /* AddNewViewController.swift in Sources */,
 				DA232B4427F5A373007D997E /* DetailsViewController.swift in Sources */,
+				ECD2620A27FDFD1D00681239 /* probaAB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
