@@ -23,7 +23,47 @@ class AddNewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        swLow.isOn = true
+        swMedium.isOn = false
+        swHigh.isOn = false
+        
+    }
+    
+    
+    
+    @IBAction func btnDoneTapped(_ sender: Any) {
+        
+        guard tfTitle.text! != "" && tvContent.text! != "" else {
+            return
+        }
+        
+        var priority = 1
+        
+        if swLow.isOn {
+            priority = 1
+        } else if swMedium.isOn {
+            priority = 2
+        } else if swHigh.isOn {
+            priority = 3
+        }
+        
+        let datum = dpDate.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        let datumStr = dateFormatter.string(from: datum)
+        
+        var newItem = ToDoItem(id: nil, title: tfTitle.text!, content: tvContent.text!, isCompleted: 0, priority: priority, date: datumStr)
+        
+        ToDoRequests.addNewItem(newItem: newItem) { rezultat in
+            
+            print(rezultat)
+            
+            let dobijeniId = rezultat["id"] as! Int
+            newItem.id = dobijeniId
+            
+        }
+        
+        performSegue(withIdentifier: "backToActive", sender: self)
     }
     
 }

@@ -574,7 +574,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add new" largeTitleDisplayMode="never" id="mou-VX-RuU">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fzE-7U-b01"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fzE-7U-b01">
+                            <connections>
+                                <action selector="btnDoneTapped:" destination="mje-75-HnU" id="nI7-kl-wYd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnDone" destination="fzE-7U-b01" id="doC-Ab-C2f"/>
@@ -584,11 +588,13 @@
                         <outlet property="swMedium" destination="5Y3-S5-L1k" id="87b-NH-RCP"/>
                         <outlet property="tfTitle" destination="ST0-Oi-4no" id="udb-C5-ekQ"/>
                         <outlet property="tvContent" destination="4Na-Xs-uvw" id="h42-0Z-6nd"/>
+                        <segue destination="scp-8Q-gpk" kind="unwind" identifier="backToActive" unwindAction="backToActive:" id="fS5-aD-VMv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ay-Jd-K6a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="scp-8Q-gpk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3029" y="-774"/>
+            <point key="canvasLocation" x="3381" y="-748"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VEX-RX-0GR">
