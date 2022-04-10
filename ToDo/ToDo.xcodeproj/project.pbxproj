@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		093B85E627FE0C4B009D3F14 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093B85E527FE0C4B009D3F14 /* Requests.swift */; };
+		979C5C21280330D00082731B /* ProbaDunja.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979C5C20280330D00082731B /* ProbaDunja.swift */; };
 		DA232B0E27F5A18B007D997E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B0D27F5A18B007D997E /* AppDelegate.swift */; };
 		DA232B1027F5A18B007D997E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B0F27F5A18B007D997E /* SceneDelegate.swift */; };
 		DA232B1227F5A18B007D997E /* ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA232B1127F5A18B007D997E /* ActiveViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		093B85E527FE0C4B009D3F14 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		979C5C20280330D00082731B /* ProbaDunja.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbaDunja.swift; sourceTree = "<group>"; };
 		DA232B0A27F5A18B007D997E /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA232B0D27F5A18B007D997E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA232B0F27F5A18B007D997E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				DA232B1627F5A18C007D997E /* Assets.xcassets */,
 				DA232B1827F5A18C007D997E /* LaunchScreen.storyboard */,
 				DA232B1B27F5A18C007D997E /* Info.plist */,
+				979C5C20280330D00082731B /* ProbaDunja.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 				DA232B4C27F5BD5C007D997E /* Model.swift in Sources */,
 				DA232B4627F5A38A007D997E /* CompletedViewController.swift in Sources */,
 				DA232B1227F5A18B007D997E /* ActiveViewController.swift in Sources */,
+				979C5C21280330D00082731B /* ProbaDunja.swift in Sources */,
 				DA232B0E27F5A18B007D997E /* AppDelegate.swift in Sources */,
 				DA232B1027F5A18B007D997E /* SceneDelegate.swift in Sources */,
 				093B85E627FE0C4B009D3F14 /* Requests.swift in Sources */,
