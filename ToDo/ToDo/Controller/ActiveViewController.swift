@@ -19,148 +19,151 @@ class ActiveCell: UITableViewCell {
     @IBOutlet weak var backgroundViewOfItem: UIView! // Ovaj view dodat je iza svih ovih kontrola kako bi mogao da se napravi efekat okvira oko kontrola unutar ćelije
 }
 
-class ActiveViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ActiveViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!   // table view
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!   // indikator za učitavanje (loader) može biti prikazan ili sakriven (prikazuje se dok se učitavaju podaci, a sakriva kada se prikažu podaci)
     
-    var aktivneStavke = [ToDoItem]()
+
+    var activeItems = [ToDoItem]()
+    
+     var uuid = UIDevice.current.identifierForVendor!.uuidString
+    // var uuid = "12345"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        // getActiveItems()
+        // getActiveItems(items: ToDoItem.dummyData)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        getActiveItems()
+        getActiveItemsFromServer()
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return aktivneStavke.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let celija = tableView.dequeueReusableCell(withIdentifier: "activeCell") as! ActiveCell
-        
-        // popunjavanje podataka
-        
-        let podaci = aktivneStavke[indexPath.row]
-        
-        celija.lblTitle.text = podaci.title
-        celija.lblContent.text = podaci.content
-        
-        let prioritet = podaci.priority
-        
-        if prioritet == 1 {
-            celija.backgroundViewOfItem.layer.borderColor = UIColor.yellow.cgColor
-        } else if prioritet == 2 {
-            celija.backgroundViewOfItem.layer.borderColor = UIColor.orange.cgColor
-        } else {
-            celija.backgroundViewOfItem.layer.borderColor = UIColor.red.cgColor
-        }
-        
-        celija.backgroundViewOfItem.layer.borderWidth = 2
-        celija.backgroundViewOfItem.layer.cornerRadius = 10
-        
-        celija.accessoryType = .disclosureIndicator
-        
-        var dateFormatter = DateFormatter()
-        // pravljenje tipa Date od Stringa
-        dateFormatter.dateFormat = "YYYY-MM-dd"                   // dd  MMM     YYYY
-        let date = dateFormatter.date(from: podaci.date)! // Date - dan, mesec i godinu
-        
-        dateFormatter.dateFormat = "YYYY"
-        let godina = dateFormatter.string(from: date)
-        
-        dateFormatter.dateFormat = "MMM"
-        let mesec = dateFormatter.string(from: date)
-        
-        dateFormatter.dateFormat = "dd"
-        let dan = dateFormatter.string(from: date)
-        
-        celija.lblDay.text = dan
-        celija.lblMonth.text = mesec
-        celija.lblYear.text = godina
-        
-        
-        return celija
-    }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        .delete
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if editingStyle == .delete {
-            
-            ToDoRequests.deleteItem(id: aktivneStavke[indexPath.row].id!) { rezultat in
-                print(rezultat)
-                self.aktivneStavke.remove(at: indexPath.row)
-                DispatchQueue.main.async {
-                    tableView.reloadData()
-                }
+    func getActiveItems(items: [ToDoItem]) {
+        for item in items {
+            if item.isCompleted == 0 {
+                activeItems.append(item)
             }
         }
-        
+        activityIndicator.stopAnimating()
     }
     
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let akcija = UIContextualAction(style: .normal, title: "Complete") { action, _, _ in
-            print("COMPLETE")
-            ToDoRequests.completeItem(id: self.aktivneStavke[indexPath.row].id!) { rezultat in
-                print(rezultat)
-                
-                self.getActiveItems()
-                
-            }
+    func getActiveItemsFromServer() {
+        activityIndicator.startAnimating()
+        let url = ItemsRequests.createURLForItems(uuid: self.uuid)!
+        ItemsRequests.getAllItems(url: url) { [self] podaci in
+            activeItems.removeAll()
+            let rezultati = podaci["results"] as! [[String:Any]]
             
-        }
-
-        akcija.backgroundColor = .systemGreen
-        
-        return UISwipeActionsConfiguration(actions: [akcija])
-        
-    }
-    
-    func getActiveItems() {
-        
-        ToDoRequests.getAllItems { rezulatati in
-            
-            let results = rezulatati["results"] as? [[String:Any]]
-            if let results = results {
+            for rezultat in rezultati {
                 
-                self.aktivneStavke.removeAll()
-                
-                for res in results {
-                    print(res)
-
-                    let stavka = ToDoItem(id: res["id"] as! Int, title: res["title"] as! String, content: res["content"] as! String, isCompleted: res["isCompleted"] as! Int, priority: res["priority"] as! Int, date: res["date"] as! String)
-                    
-                    if stavka.isCompleted == 0 {
-                        
-                        self.aktivneStavke.append(stavka)
-                        
-                        DispatchQueue.main.async {
-                            self.tableView.reloadData()
-                            self.activityIndicator.stopAnimating()
-                        }
+                let stavka = ToDoItem(id: rezultat["id"] as! Int, title: rezultat["title"] as! String, content: rezultat["content"] as! String, isCompleted: rezultat["isCompleted"] as! Int, priority: rezultat["priority"] as! Int, date: rezultat["date"] as! String)
+                if stavka.isCompleted == 0 {
+                    activeItems.append(stavka)
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                        activityIndicator.stopAnimating()
                     }
                 }
             }
+            DispatchQueue.main.async {
+                activityIndicator.stopAnimating()
+            }
         }
     }
     
-    @IBAction func backToActive(_ unwindSegue: UIStoryboardSegue) {
-        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return activeItems.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "activeCell", for: indexPath) as! ActiveCell
+        
+        cell.accessoryType = .disclosureIndicator
+        
+        let rowData = activeItems[indexPath.row]
+        
+        cell.lblTitle.text = rowData.title
+        cell.lblContent.text = rowData.content
+        
+        let datum = rowData.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd"
+        
+        let datumDate = dateFormatter.date(from: datum)
+        
+        dateFormatter.dateFormat = "MMM"
+        let month = dateFormatter.string(from: datumDate!)
+        dateFormatter.dateFormat = "dd"
+        let day = dateFormatter.string(from: datumDate!)
+        dateFormatter.dateFormat = "YYYY"
+        let year = dateFormatter.string(from: datumDate!)
+        
+        cell.lblDay.text = day
+        cell.lblMonth.text = month
+        cell.lblYear.text = year
+        
+        cell.backgroundViewOfItem.layer.borderWidth = 2
+        cell.backgroundViewOfItem.layer.cornerRadius = 10
+        switch rowData.priority {
+        case 1:
+            cell.backgroundViewOfItem.layer.borderColor = UIColor.yellow.cgColor
+        case 2:
+            cell.backgroundViewOfItem.layer.borderColor = UIColor.orange.cgColor
+        case 3:
+            cell.backgroundViewOfItem.layer.borderColor = UIColor.red.cgColor
+        default:
+            break
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let stavkaZaBrisanje = activeItems[indexPath.row]
+        
+        ItemsRequests.deleteItem(id: stavkaZaBrisanje.id!)
+        
+        activeItems.remove(at: indexPath.row)
+        tableView.reloadData()
+    }
 
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let completeAction = UIContextualAction(style: .normal, title: "Complete") { action, _, _ in
+            ItemsRequests.completeItem(id: self.activeItems[indexPath.row].id!) { rezultati in
+                if (rezultati["message"] as? String) != nil {
+                    self.activeItems.remove(at: indexPath.row)
+                    DispatchQueue.main.async {
+                        tableView.reloadData()
+                        
+                        let alert = UIAlertController(title: "Note completed successfully", message: "", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert, animated: true)
+                    }
+                    
+                }
+            }
+            print("Tap")
+        }
+        completeAction.backgroundColor = .systemGreen
+        return UISwipeActionsConfiguration(actions: [completeAction])
+    }
+    var odabrano: ToDoItem?
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "activeDetails" {
+            let destinacija = segue.destination as! DetailsViewController
+            destinacija.odabranaStavka = odabrano!
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        odabrano = activeItems[indexPath.row]
+        performSegue(withIdentifier: "activeDetails", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    @IBAction func unwindToActive(_ unwindSegue: UIStoryboardSegue) {
+        getActiveItemsFromServer()
+    }
 }
 

@@ -23,47 +23,90 @@ class AddNewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Do any additional setup after loading the view.
         swLow.isOn = true
         swMedium.isOn = false
         swHigh.isOn = false
         
+        hideKeyboardWhenTappedAround()
     }
     
-    
-    
-    @IBAction func btnDoneTapped(_ sender: Any) {
+    func createAndSendItem() {
+        var priority = 1
         
-        guard tfTitle.text! != "" && tvContent.text! != "" else {
+        guard tfTitle.text != "" && tvContent.text != "" else {
             return
         }
-        
-        var priority = 1
         
         if swLow.isOn {
             priority = 1
         } else if swMedium.isOn {
             priority = 2
-        } else if swHigh.isOn {
+        }
+        else {
             priority = 3
         }
         
-        let datum = dpDate.date
+    //  formatiranje datuma
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
-        let datumStr = dateFormatter.string(from: datum)
+        let datum = dateFormatter.string(from: dpDate.date)
+    
+        let uuid = UIDevice.current.identifierForVendor!.uuidString
+    
+        var newToDoItem = ToDoItem(id: nil, title: tfTitle.text!, content: tvContent.text!, isCompleted: 0, priority: priority, date: datum)
         
-        var newItem = ToDoItem(id: nil, title: tfTitle.text!, content: tvContent.text!, isCompleted: 0, priority: priority, date: datumStr)
-        
-        ToDoRequests.addNewItem(newItem: newItem) { rezultat in
-            
-            print(rezultat)
-            
-            let dobijeniId = rezultat["id"] as! Int
-            newItem.id = dobijeniId
-            
+        ItemsRequests.sendItemToServer(uuid: uuid, newItem: newToDoItem) { result in
+            let newId = result["id"] as! Int
+            newToDoItem.id = newId
+            print(newToDoItem)
         }
+        performSegue(withIdentifier: "povratak", sender: self)
+    }
+    @IBAction func btnDoneTapped(_ sender: Any) {
+        createAndSendItem()
         
-        performSegue(withIdentifier: "backToActive", sender: self)
     }
     
+    func hideKeyboardWhenTappedAround() {
+            let tapGesture = UITapGestureRecognizer(target: self,
+                             action: #selector(hideKeyboard))
+            view.addGestureRecognizer(tapGesture)
+        }
+
+        @objc func hideKeyboard() {
+            view.endEditing(true)
+        }
+    
+    
+    @IBAction func swLowValueChanged(_ sender: Any) {
+        if swLow.isOn {
+            swMedium.isOn = false
+            swHigh.isOn = false
+        } else if swLow.isOn == false {
+            swMedium.isOn = true
+            swHigh.isOn = false
+        }
+    }
+    
+    @IBAction func swMediumValueChanged(_ sender: Any) {
+        
+        if swMedium.isOn {
+            swLow.isOn = false
+            swHigh.isOn = false
+        } else if swMedium.isOn == false {
+            swLow.isOn = false
+            swHigh.isOn = true
+        }
+        
+    }
+    @IBAction func swHighValueChanged(_ sender: Any) {
+        if swHigh.isOn {
+            swLow.isOn = false
+            swMedium.isOn = false
+        } else if swHigh.isOn == false {
+            swLow.isOn = true
+            swMedium.isOn = false
+        }
+    }
 }

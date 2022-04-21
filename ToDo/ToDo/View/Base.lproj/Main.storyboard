@@ -22,18 +22,18 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="completedCell" rowHeight="100" id="sTM-U9-mLa" customClass="CompletedCell" customModule="ToDo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationWidth="0.0" reuseIdentifier="completedCell" rowHeight="100" id="sTM-U9-mLa" customClass="CompletedCell" customModule="ToDo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sTM-U9-mLa" id="AE5-t1-G8Y">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iio-e6-rgQ">
-                                                    <rect key="frame" x="5" y="5" width="404" height="90"/>
+                                                    <rect key="frame" x="5" y="5" width="375.5" height="90"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTZ-RJ-v55">
-                                                            <rect key="frame" x="12" y="8" width="303" height="44"/>
+                                                            <rect key="frame" x="12" y="8" width="274.5" height="44"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="54" id="ohW-zy-tud"/>
                                                             </constraints>
@@ -42,7 +42,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgb-bK-s40">
-                                                            <rect key="frame" x="323" y="3" width="23" height="83"/>
+                                                            <rect key="frame" x="294.5" y="3" width="23" height="83"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="93" id="Mro-BU-bsX"/>
                                                                 <constraint firstAttribute="width" constant="23" id="ZKm-fs-Z9s"/>
@@ -52,7 +52,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="July" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsX-fq-zua">
-                                                            <rect key="frame" x="354" y="3" width="42" height="45"/>
+                                                            <rect key="frame" x="325.5" y="3" width="42" height="45"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="42" id="Rdp-Fc-PsJ"/>
                                                                 <constraint firstAttribute="height" constant="45" id="anB-zY-zR2"/>
@@ -61,8 +61,8 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlN-eN-BaN">
-                                                            <rect key="frame" x="354" y="45" width="42" height="43"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1995" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlN-eN-BaN">
+                                                            <rect key="frame" x="325.5" y="45" width="42" height="43"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="43" id="GvT-dg-TC2"/>
                                                                 <constraint firstAttribute="width" constant="42" id="QVF-EC-yOM"/>
@@ -72,7 +72,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jD0-0o-hX2">
-                                                            <rect key="frame" x="12" y="56" width="303" height="26"/>
+                                                            <rect key="frame" x="12" y="56" width="274.5" height="26"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="26" id="fn8-Sd-Kef"/>
                                                             </constraints>
@@ -112,7 +112,7 @@
                                             <outlet property="lblDay" destination="kgb-bK-s40" id="uJX-wr-hJB"/>
                                             <outlet property="lblMonth" destination="EsX-fq-zua" id="w6i-HK-d3g"/>
                                             <outlet property="lblTitle" destination="dTZ-RJ-v55" id="ar6-Le-Fwa"/>
-                                            <outlet property="lblYear" destination="PlN-eN-BaN" id="xJ3-ux-Eq5"/>
+                                            <outlet property="lblYear" destination="PlN-eN-BaN" id="V27-qR-aEi"/>
                                             <outlet property="vwBorder" destination="iio-e6-rgQ" id="HO8-yk-eVJ"/>
                                         </connections>
                                     </tableViewCell>
@@ -220,7 +220,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVd-Ao-qZG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1995" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVd-Ao-qZG">
                                 <rect key="frame" x="352" y="315" width="42" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="6qN-ij-w0j"/>
@@ -254,6 +254,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Details" largeTitleDisplayMode="never" id="VhT-tV-Ieq"/>
                     <connections>
+                        <outlet property="headerView" destination="019-BV-AT3" id="MmF-jT-eDg"/>
                         <outlet property="lblDay" destination="WgA-cI-YP3" id="OfX-kP-9Fy"/>
                         <outlet property="lblMonth" destination="FdQ-QU-rcl" id="sbo-Ed-36x"/>
                         <outlet property="lblPriorityName" destination="pNw-Ra-cbt" id="0hy-k9-JDF"/>
@@ -292,6 +293,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuW-a9-wUT">
                                                             <rect key="frame" x="12" y="8" width="303" height="44"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="naslov"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="54" id="heF-yZ-Ty8"/>
                                                             </constraints>
@@ -319,7 +321,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfp-Gm-LSd">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1995" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfp-Gm-LSd">
                                                             <rect key="frame" x="354" y="45" width="42" height="43"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="43" id="Bxq-Wp-TyC"/>
@@ -438,6 +440,7 @@
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ST0-Oi-4no">
                                                 <rect key="frame" x="20" y="45" width="375" height="34"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="titleTF"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -450,6 +453,7 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Na-Xs-uvw">
                                                 <rect key="frame" x="20" y="116" width="374" height="127"/>
                                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="contentTV"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="127" id="qOd-Ez-gQ2"/>
                                                 </constraints>
@@ -476,9 +480,15 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lfe-AW-pZn">
                                                 <rect key="frame" x="184" y="280" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="swLowValueChanged:" destination="mje-75-HnU" eventType="valueChanged" id="A1f-OI-wfd"/>
+                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Y3-S5-L1k">
                                                 <rect key="frame" x="184" y="319" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="swMediumValueChanged:" destination="mje-75-HnU" eventType="valueChanged" id="0rk-E1-gz2"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7y-Pk-DN1">
                                                 <rect key="frame" x="20" y="280" width="31" height="31"/>
@@ -509,6 +519,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZH-CN-cc8">
                                                 <rect key="frame" x="184" y="358" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="swHighValueChanged:" destination="mje-75-HnU" eventType="valueChanged" id="fsZ-tN-dAT"/>
+                                                </connections>
                                             </switch>
                                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="iUq-OR-eae">
                                                 <rect key="frame" x="20" y="436" width="374" height="188"/>
@@ -576,7 +589,7 @@
                     <navigationItem key="navigationItem" title="Add new" largeTitleDisplayMode="never" id="mou-VX-RuU">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="fzE-7U-b01">
                             <connections>
-                                <action selector="btnDoneTapped:" destination="mje-75-HnU" id="nI7-kl-wYd"/>
+                                <action selector="btnDoneTapped:" destination="mje-75-HnU" id="j0D-Uq-g80"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -586,15 +599,15 @@
                         <outlet property="swHigh" destination="iZH-CN-cc8" id="g82-r3-MyM"/>
                         <outlet property="swLow" destination="lfe-AW-pZn" id="azf-7P-biq"/>
                         <outlet property="swMedium" destination="5Y3-S5-L1k" id="87b-NH-RCP"/>
-                        <outlet property="tfTitle" destination="ST0-Oi-4no" id="udb-C5-ekQ"/>
+                        <outlet property="tfTitle" destination="ST0-Oi-4no" id="Fvg-rB-cx6"/>
                         <outlet property="tvContent" destination="4Na-Xs-uvw" id="h42-0Z-6nd"/>
-                        <segue destination="scp-8Q-gpk" kind="unwind" identifier="backToActive" unwindAction="backToActive:" id="fS5-aD-VMv"/>
+                        <segue destination="lM2-Pi-svU" kind="unwind" identifier="povratak" unwindAction="unwindToActive:" id="Fmj-ab-MTf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ay-Jd-K6a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="scp-8Q-gpk" userLabel="Exit" sceneMemberID="exit"/>
+                <exit id="lM2-Pi-svU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3381" y="-748"/>
+            <point key="canvasLocation" x="3029" y="-774"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="VEX-RX-0GR">
@@ -654,7 +667,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VXY-p2-ibA"/>
+        <segue reference="pdv-2p-Kuf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar.circle.fill" catalog="system" width="128" height="121"/>
