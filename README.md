@@ -7,12 +7,10 @@ You can also mark the <b>priority</b> of each item:
 - 🟥 `high`
 
 
-After you have completed the task you can mark it as complete (by swiping from left to right).<br>All completed tasks are saved in Completed section.
-If you want to delete a task, you can do so by swiping from right to left.
+You can mark the task as completed (by swiping from left to right). :arrow_right:<br>All completed tasks are saved in Completed section.
+If you want to delete a task, you can do so by swiping from right to left.:arrow_left:
 
 <a href="https://apps.apple.com/rs/app/todo-list-planner/id1620030818"><img src="https://i.ibb.co/GttYVpZ/appstore.png"></img></a>
-
-Project has been created for our iOS classes.
 
 ## Features
 - Active items
