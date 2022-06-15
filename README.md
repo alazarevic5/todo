@@ -1,4 +1,4 @@
-# ToDo List - Planner
+# ToDo List - Planner :page_with_curl::heavy_check_mark:
 
 Maintain your daily tasks or everything that you have to do. Application is helpful in planning your daily schedules.<br>
 You can also mark the <b>priority</b> of each item:
@@ -7,8 +7,8 @@ You can also mark the <b>priority</b> of each item:
 - 🟥 `high`
 
 
-You can mark the task as completed (by swiping from left to right). :arrow_right:<br>All completed tasks are saved in Completed section.
-If you want to delete a task, you can do so by swiping from right to left.:arrow_left:
+You can mark the task as completed :heavy_check_mark: (by swiping from left to right). :arrow_right:<br>All completed tasks are saved in Completed section.
+If you want to delete a task :x:, you can do so by swiping from right to left.:arrow_left:
 
 <a href="https://apps.apple.com/rs/app/todo-list-planner/id1620030818"><img src="https://i.ibb.co/GttYVpZ/appstore.png"></img></a>
 
