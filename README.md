@@ -1,9 +1,13 @@
 # ToDo List - Planner
 
-Maintain your daily tasks or everything that you have to do. Application is helpful in planning your daily schedules.
-You can also mark the priority of each item (low, medium, high).
+Maintain your daily tasks or everything that you have to do. Application is helpful in planning your daily schedules.<br>
+You can also mark the <b>priority</b> of each item:
+- 🟨 `low`
+- 🟧 `medium`
+- 🟥 `high`
 
-After you have completed the task you can mark it as complete (by swiping from left to right). All completed tasks are saved in Completed section.
+
+After you have completed the task you can mark it as complete (by swiping from left to right).<br>All completed tasks are saved in Completed section.
 If you want to delete a task, you can do so by swiping from right to left.
 
 <a href="https://apps.apple.com/rs/app/todo-list-planner/id1620030818"><img src="https://i.ibb.co/GttYVpZ/appstore.png"></img></a>
