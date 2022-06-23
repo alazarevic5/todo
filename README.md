@@ -35,9 +35,6 @@ The application sends requests to that server (GET, POST, DELETE).
 UIKit framework, MVC pattern, Xcode IDE
   
 ## Screenshots
-![1](https://user-images.githubusercontent.com/86428327/173867613-1425eab7-9274-469a-9c1d-1a43f501007b.PNG)
-![2](https://user-images.githubusercontent.com/86428327/173867630-69f78301-4d75-4360-a36a-f0695e0cacde.PNG)
-![3](https://user-images.githubusercontent.com/86428327/173867646-f6e41775-8f69-4945-8be3-9bcf523c0b7c.PNG)
-![4](https://user-images.githubusercontent.com/86428327/173867671-7dcf5527-9d46-421e-924f-3bc4187f3faf.PNG)
-![5](https://user-images.githubusercontent.com/86428327/173868146-bde519aa-d521-4b62-b67d-1da4c921638a.PNG)
-![6](https://user-images.githubusercontent.com/86428327/173868166-35ae71fe-d8fc-40bf-a0cc-ab47d60c7533.PNG)
+<img width="588" alt="Screenshot 2022-06-23 at 13 09 35" src="https://user-images.githubusercontent.com/86428327/175285532-cebd40c7-8fd4-4a1d-b023-cd6fb05949d0.png">
+<img width="574" alt="Screenshot 2022-06-23 at 13 12 49" src="https://user-images.githubusercontent.com/86428327/175286026-e03c289f-ffa6-4620-baab-2a5ed6609e60.png">
+
